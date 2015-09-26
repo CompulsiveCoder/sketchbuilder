@@ -96,7 +96,7 @@ namespace WWW.Blink
 				psi3.UseShellExecute = false;
 				psi3.RedirectStandardOutput = true;
 
-        psi3.Arguments = "upload -m " + board + " -p " + port;
+        psi3.Arguments = "upload -m " + board;// + " -p " + port;
 				Process p3 = Process.Start(psi3);
 				string strOutput3 = p3.StandardOutput.ReadToEnd();
 						p3.WaitForExit();

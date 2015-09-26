@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F695CB91-152F-4EA5-AFBE-DB5F21515429}</ProjectGuid>
+    <ProjectGuid>{2EA7C1D9-3ADE-4CCE-9F9C-E16D74097730}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>sketchbuilder.Builders.Blink</RootNamespace>
     <AssemblyName>sketchbuilder.Builders.Blink</AssemblyName>

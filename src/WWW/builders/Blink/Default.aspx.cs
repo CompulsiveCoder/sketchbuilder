@@ -8,7 +8,7 @@ namespace WWW
 	
 	public partial class Default : System.Web.UI.Page
 	{
-    public string Port { get; set; }
+    public string Port;
 
     void Page_Load(object sender, EventArgs e)
     {

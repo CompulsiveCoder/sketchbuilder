@@ -9,9 +9,47 @@
 <body>
 	<form id="form1" runat="server">
     <style>
+    body
+    {
+      font-family: verdana;
+      font-size: 12px;
+    }
+
+    h1
+    {
+      font-family: arial;
+      font-size: 16px;
+    }
+
+    h2
+    {
+      font-family: arial;
+      font-size: 14px;
+      border: solid 1px lightgray;
+      padding: 4px;
+    }
+
+    div,span
+    {
+      margin: 0px;
+      padding: 4px;
+    }
+
+
     .pin
     {
       width: 30px;
+    }
+
+    .pinRow
+    {
+      border: solid 1px lightgray;
+      margin-left: 10px;
+    }
+
+    .row
+    {
+      border: solid 1px lightgray;
     }
     </style>
     <script type="text/javascript">
@@ -66,8 +104,8 @@
         var newTextBoxDiv = $(document.createElement('div')).attr("id", 'ledFieldDiv' + i);
                 
         newTextBoxDiv.after().html(
-          '<div>LED #' + number +
-          'Pin: <input value=' + pinNumber + ' class="pin" name="ledField' + i + '" id="ledField' + i + '" /></div>'
+          '<div class="pinRow">LED #' + number +
+          'Pin: <input value=' + pinNumber + ' name="ledField' + i + '" id="ledField' + i + '" /> '
         );
             
         newTextBoxDiv.appendTo("#ledsCont");
@@ -150,19 +188,20 @@
          }
       });
     }
+
     </script>
 		<h1>Multi Blink Builder</h1>
     <div>Use the form below to generate a sketch which blinks LEDs on the specified pins.</div>
-    <h2>Base Source</h2>
-		<h2>LEDs</h2>
+    <h2>Sketch Settings</h2>
+    <div>Delay: <input width="50" value="1000" id="delay" /></div>
+		<h3>LEDs</h3>
 		<div>Total: <input width="50" value="1" id="totalLeds" />
 			<span class="btn" onclick="fewerLeds();">&lt;</span><span class="btn" onclick="moreLeds();">&gt;</span>
 		</div>
-		<div>Delay: <input width="50" value="1000" id="delay" /></div>
     <div id="ledsCont"></div>
     <input type="button" value="Generate Sketch" onclick="create();"/><br/>
     <div id="SketchCont" style="width: 600px;"></div>
-    <div>Port: <input id="port" value='<% =Port %>'/></div>
+    <div>Port: <input id="port" value="<% =Port %>"/></div>
     <div>Board: 
     <select id="board">
       <option value="uno">uno</option>
