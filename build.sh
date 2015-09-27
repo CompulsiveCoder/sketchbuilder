@@ -2,7 +2,7 @@ cd mod/duinocom/src
 
 sh build.sh
 
-cd src
+cd ../../../src
 
 xbuild /p:Configuration=Release
 
