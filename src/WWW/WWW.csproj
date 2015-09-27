@@ -38,7 +38,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Global.asax" />
     <Content Include="web.config" />
     <Content Include="default.js" />
     <Content Include="Builders.aspx" />
@@ -56,9 +55,6 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Builders.aspx.cs">
       <DependentUpon>Builders.aspx</DependentUpon>
     </Compile>
