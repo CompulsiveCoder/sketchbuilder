@@ -29,7 +29,7 @@ const int interval = 1000;
 
 void setup() {          
   for (int i = 0; i < pinCount; i++)
-  {      
+  {
     pinMode(ledPins[i], OUTPUT);  
   }  
 }

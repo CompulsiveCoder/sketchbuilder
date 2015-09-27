@@ -94,11 +94,15 @@ namespace WWW.GreenKit
         psi2.FileName = "ino";
         psi2.UseShellExecute = false;
         psi2.RedirectStandardOutput = true;
+        psi2.RedirectStandardError = true;
 
         psi2.Arguments = "build -m " + board;
         Process p2 = Process.Start(psi2);
         string strOutput2 = p2.StandardOutput.ReadToEnd();
         p2.WaitForExit();
+        string error2 = p2.StandardError.ReadToEnd();
+        Console.WriteLine(error2);
+        output += error2;
         Console.WriteLine(strOutput2);
         Console.WriteLine("Finished");
 
@@ -109,11 +113,15 @@ namespace WWW.GreenKit
         psi3.FileName = "ino";
         psi3.UseShellExecute = false;
         psi3.RedirectStandardOutput = true;
+        psi3.RedirectStandardError = true;
 
         psi3.Arguments = "upload -m " + board + " -p " + port;
         Process p3 = Process.Start(psi3);
-        string strOutput3 = p3.StandardOutput.ReadToEnd();
         p3.WaitForExit();
+        string strOutput3 = p3.StandardOutput.ReadToEnd();
+        string error3 = p3.StandardError.ReadToEnd();
+        Console.WriteLine(error3);
+        output += error3;
         Console.WriteLine(strOutput3);
         Console.WriteLine("Finished");
 

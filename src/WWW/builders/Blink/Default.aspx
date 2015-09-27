@@ -104,7 +104,7 @@
         var newTextBoxDiv = $(document.createElement('div')).attr("id", 'ledFieldDiv' + i);
                 
         newTextBoxDiv.after().html(
-          '<div class="pinRow">LED #' + number +
+          '<div class="pinRow">LED ' + number + ' ' +
           'Pin: <input value=' + pinNumber + ' name="ledField' + i + '" id="ledField' + i + '" /> '
         );
             
@@ -179,12 +179,31 @@
 
       //alert(url);
       $('#OutputCont').text("Loading...");
+      $('#UploadStatus').html('...');
 
       $.ajax({
          url:url,
          type:'GET',
          success: function(data){
              $('#OutputCont').html($(data).find('#body').html());
+            var log = $('#OutputCont').html();
+
+            var backgroundColor = 'black';
+            var text = '...';
+            $('#UploadStatus').text('...');
+
+            if (log.indexOf('avrdude done.') > -1)
+            {
+              backgroundColor = 'green';
+              text = 'Upload Complete';
+            }
+            else
+            {
+              backgroundColor = 'red';
+              text = 'Upload Failed';
+            }
+
+            $('#UploadStatus').html('<span style="font-weight:bold;color:' + backgroundColor + ';">' + text + '</span>');
          }
       });
     }
@@ -194,7 +213,7 @@
     <div>Use the form below to generate a sketch which blinks LEDs on the specified pins.</div>
     <h2>Sketch Settings</h2>
     <div>Delay: <input width="50" value="1000" id="delay" /></div>
-		<h3>LEDs</h3>
+		<h2>LEDs</h2>
 		<div>Total: <input width="50" value="1" id="totalLeds" />
 			<span class="btn" onclick="fewerLeds();">&lt;</span><span class="btn" onclick="moreLeds();">&gt;</span>
 		</div>
@@ -208,7 +227,7 @@
       <option value="nano328">nano</option>
     </select>
     </div>
-    <div><input type="button" value="Upload" onclick="upload();"/></div>
+    <div><input type="button" value="Upload" onclick="upload();"/> <span id="UploadStatus"></span></div>
     <div id="OutputCont" style="width: 600px;"></div>
 	</form>
 </body>

@@ -1,0 +1,3 @@
+[submodule "mod/duinocom"]
+	path = mod/duinocom
+	url = ../duinocom
