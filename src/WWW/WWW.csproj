@@ -41,7 +41,6 @@
     <Content Include="Global.asax" />
     <Content Include="web.config" />
     <Content Include="default.js" />
-    <Content Include="Sketch.aspx" />
     <Content Include="Builders.aspx" />
     <Content Include="builders\GreenDevKit\Default.aspx" />
     <Content Include="builders\GreenDevKit\style.css" />
@@ -59,12 +58,6 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Sketch.aspx.cs">
-      <DependentUpon>Sketch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Sketch.aspx.designer.cs">
-      <DependentUpon>Sketch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Builders.aspx.cs">
       <DependentUpon>Builders.aspx</DependentUpon>
