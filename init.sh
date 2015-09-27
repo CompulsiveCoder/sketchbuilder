@@ -6,3 +6,5 @@ cd lib
 wget http://nuget.org/nuget.exe
 
 mono nuget.exe install nunit
+
+cd ..
