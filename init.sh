@@ -1,4 +1,4 @@
-apt-get install mono-complete mono-xsp4
+apt-get install mono-complete mono-devel mono-xsp4
 
 mkdir lib
 cd lib
