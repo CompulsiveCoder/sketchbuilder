@@ -1,8 +1,0 @@
-/home/j/cloud/primary/Projects/sketchbuilder/src/Core.Tests/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/j/cloud/primary/Projects/sketchbuilder/src/Core.Tests/bin/Release/sketchbuilder.Core.Tests.dll.mdb
-/home/j/cloud/primary/Projects/sketchbuilder/src/Core.Tests/bin/Release/sketchbuilder.Core.Tests.dll
-/home/j/cloud/primary/Projects/sketchbuilder/src/Core.Tests/obj/Release/sketchbuilder.Core.Tests.dll
-/home/j/cloud/primary/Projects/sketchbuilder/src/Core.Tests/obj/Release/sketchbuilder.Core.Tests.dll.mdb
-/home/j/cloud/primary/Projects/sketchbuilder/src/Core.Tests/bin/Release/nunit.framework.dll
-/home/j/cloud/primary/Projects/sketchbuilder/src/Core.Tests/bin/Release/sketchbuilder.Core.dll
-/home/j/cloud/primary/Projects/sketchbuilder/src/Core.Tests/bin/Release/sketchbuilder.Core.dll.mdb
