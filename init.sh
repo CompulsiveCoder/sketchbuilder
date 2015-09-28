@@ -1,6 +1,6 @@
 git submodule update --init --recursive
 
-apt-get install -y mono-complete mono-devel mono-xsp4
+apt-get install -y mono-runtime mono-xsp4
 
 mkdir lib
 cd lib
