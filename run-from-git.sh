@@ -4,4 +4,4 @@ git clone https://github.com/CompulsiveCoder/sketchbuilder.git
 
 cd sketchbuilder
 
-sh start.sh
+sh init-build-launch.sh
