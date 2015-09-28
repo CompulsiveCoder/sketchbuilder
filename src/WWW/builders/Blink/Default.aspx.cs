@@ -16,10 +16,10 @@ namespace WWW
 
       var port = detector.Guess ();
 
-      if (port == null)
-        throw new Exception ("No device detected.");
-
-      Port = port.PortName;
+      if (port != null)
+        Port = port.PortName;
+      else
+        Port = "[no device detected]";
     }
 	}
 }
