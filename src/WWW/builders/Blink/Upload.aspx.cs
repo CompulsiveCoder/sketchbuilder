@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Diagnostics;
 using System.Threading;
+using duinocom.Upload;
 
 namespace WWW.Blink
 {
@@ -35,11 +36,13 @@ namespace WWW.Blink
 
       var code = builder.Build (ledPins.ToArray(), delay);
 
-      Output = UploadSketch (port, board, code);
+      var uploader = new DuinoUploader ();
+      Output = uploader.UploadCode(code, port, board);
 
     }    
 
-	    public string UploadSketch(string port, string board, string code)
+    // TODO: Remove
+	  /*  public string UploadSketch(string port, string board, string code)
 	    {
 			var output = "";
 
@@ -124,7 +127,7 @@ namespace WWW.Blink
 				output += ex.ToString ();
 			}
 			return output;
-		}
+		}*/
 	}
 }
 

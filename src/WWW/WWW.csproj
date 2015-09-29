@@ -36,6 +36,9 @@
     <Reference Include="duinocom">
       <HintPath>..\..\mod\duinocom\bin\Release\duinocom.dll</HintPath>
     </Reference>
+    <Reference Include="duinocom.Upload">
+      <HintPath>..\..\mod\duinocom\bin\Release\duinocom.Upload.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />

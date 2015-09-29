@@ -4,7 +4,7 @@ using System.Web.UI;
 using System.Collections.Generic;
 using sketchbuilder.Builders.GreenKit;
 using System.IO;
-using System.Diagnostics;
+using duinocom.Upload;
 
 namespace WWW.GreenKit
 {
@@ -48,11 +48,12 @@ namespace WWW.GreenKit
 
       var code = builder.Build (moistureSensorPins.ToArray(), pumpPins.ToArray(), thresholdPins.ToArray());
 
-      Output = UploadSketch (port, board, code);
+      var uploader = new DuinoUploader ();
+      Output = uploader.UploadCode(code, port, board);
 
     }    
 
-    public string UploadSketch(string port, string board, string code)
+   /* public string UploadSketch(string port, string board, string code)
     {
       var output = "";
 
@@ -132,7 +133,7 @@ namespace WWW.GreenKit
         output += ex.ToString ();
       }
       return output;
-    }
+    }*/
   }
 }
 
