@@ -56,6 +56,11 @@
     <Content Include="builders\Blink\Upload.aspx" />
     <Content Include="builders\GreenDevKit\Upload.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Repository.aspx" />
+    <Content Include="Repositories.aspx" />
+    <Content Include="AddRepository.aspx" />
+    <Content Include="DeleteRepository.aspx" />
+    <Content Include="Upload.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders.aspx.cs">
@@ -98,6 +103,36 @@
       <DependentUpon>Upload.aspx</DependentUpon>
     </Compile>
     <Compile Include="builders\GreenDevKit\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository.aspx.cs">
+      <DependentUpon>Repository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository.aspx.designer.cs">
+      <DependentUpon>Repository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories.aspx.cs">
+      <DependentUpon>Repositories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories.aspx.designer.cs">
+      <DependentUpon>Repositories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRepository.aspx.cs">
+      <DependentUpon>AddRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRepository.aspx.designer.cs">
+      <DependentUpon>AddRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRepository.aspx.cs">
+      <DependentUpon>DeleteRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRepository.aspx.designer.cs">
+      <DependentUpon>DeleteRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.aspx.designer.cs">
       <DependentUpon>Upload.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -38,7 +38,6 @@
 				<% =builderName %>
 				</a>
       </li>
-			</div>
 		<% } %>
     </ul>
 	</form>
