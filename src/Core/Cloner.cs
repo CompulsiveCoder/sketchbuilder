@@ -31,6 +31,7 @@ namespace sketchbuilder.Core
       Console.WriteLine(error);
       output += error;
       output += Environment.NewLine;
+      Console.WriteLine (output);
       return output;
     }
   }

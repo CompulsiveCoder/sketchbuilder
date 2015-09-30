@@ -15,8 +15,6 @@ namespace sketchbuilder.Core
     public void Delete(string repoName, string remoteRepositoryPath)
     {
       var repositoryPath = Path.Combine (RepositoriesDirectory, repoName);
-      var filePath = Path.Combine (repositoryPath, "repository.txt");
-
       Directory.Delete (repositoryPath, true);
     }
   }

@@ -38,9 +38,41 @@
 
     var url = 'Upload.aspx?repo=<% =CurrentRepository %>&file=' + encodeURIComponent(filePath) + '&board=' + board + '&port=' + encodeURIComponent(port);
 
-    alert(url);
+    //alert(url);
 
-    location.href = url;
+    //location.href = url;
+
+
+    $('#OutputCont').text("Loading...");
+    $('#UploadStatus').text('...');
+
+    $.ajax({
+       url:url,
+       type:'GET',
+       success: function(data){
+          $('#OutputCont').html($(data).find('#output').html());
+
+          var log = $('#OutputCont').html();
+
+          var backgroundColor = 'black';
+          var text = '...';
+
+          if (log.indexOf('avrdude done.') > -1)
+          {
+            backgroundColor = 'green';
+            text = 'Upload Complete';
+          }
+          else
+          {
+            backgroundColor = 'red';
+            text = 'Upload Failed';
+          }
+
+          $('#UploadStatus').html('<span style="font-weight:bold;color:' + backgroundColor + ';">' + text + '</span>');
+       }
+    });
+
+    $('#OutputCont').show();
   }
  </script>
  <form id="form1" runat="server">
@@ -61,8 +93,8 @@
       <option value="nano328">nano</option>
     </select>
     </div>
-  <div><input type="button" id="uploadButton" value="Upload" onclick='upload();'/></div>
-
+  <div><input type="button" id="uploadButton" value="Upload" onclick='upload();'/> <span id="UploadStatus"></span></div>
+  <div id="OutputCont" class="log" style="width: 600px;"></div>
  </form>
 </body>
 </html>

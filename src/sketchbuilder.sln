@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sketchbuilder.Core.Tests", "Core.Tests\sketchbuilder.Core.Tests.csproj", "{CFF6F6A5-BF04-462E-971C-5CD557447B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWW", "WWW\WWW.csproj", "{7F87C412-77F3-4407-A641-712524498EEE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sketchbuilder.Core", "Core\sketchbuilder.Core.csproj", "{B6889395-7437-47F2-A507-76FD008D58FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sketchbuilder.Builders.GreenKit", "sketchbuilder.Builders.GreenKit\sketchbuilder.Builders.GreenKit.csproj", "{F695CB91-152F-4EA5-AFBE-DB5F21515429}"
@@ -12,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sketchbuilder.Builders.GreenKit.Tests", "sketchbuilder.Builders.GreenKit.Tests\sketchbuilder.Builders.GreenKit.Tests.csproj", "{A0253461-1336-4ED7-B665-AC70F071F480}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sketchbuilder.Builders.Blink", "sketchbuilder.Builders Blink\sketchbuilder.Builders.Blink.csproj", "{2EA7C1D9-3ADE-4CCE-9F9C-E16D74097730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWW", "WWW\WWW.csproj", "{7F87C412-77F3-4407-A641-712524498EEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

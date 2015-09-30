@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{7F87C412-77F3-4407-A641-712524498EEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WWW</RootNamespace>
+    <AssemblyName>WWW</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="duinocom">
+      <HintPath>..\..\mod\duinocom\bin\Release\duinocom.dll</HintPath>
+    </Reference>
+    <Reference Include="duinocom.Upload">
+      <HintPath>..\..\mod\duinocom\bin\Release\duinocom.Upload.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <Content Include="default.js" />
+    <Content Include="Builders.aspx" />
+    <Content Include="builders\GreenDevKit\Default.aspx" />
+    <Content Include="builders\GreenDevKit\style.css" />
+    <Content Include="builders\GreenDevKit\default.js" />
+    <Content Include="builders\GreenDevKit\Create.aspx" />
+    <Content Include="builders\Blink\Create.aspx" />
+    <Content Include="builders\Blink\Default.aspx" />
+    <Content Include="builders\Blink\default.js" />
+    <Content Include="builders\Blink\jquery.js" />
+    <Content Include="builders\Blink\style.css" />
+    <Content Include="builders\Blink\Upload.aspx" />
+    <Content Include="builders\GreenDevKit\Upload.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Repository.aspx" />
+    <Content Include="Repositories.aspx" />
+    <Content Include="AddRepository.aspx" />
+    <Content Include="DeleteRepository.aspx" />
+    <Content Include="UploadOld.aspx" />
+    <Content Include="Upload.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders.aspx.cs">
+      <DependentUpon>Builders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Builders.aspx.designer.cs">
+      <DependentUpon>Builders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\GreenDevKit\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\GreenDevKit\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\GreenDevKit\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\GreenDevKit\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\Blink\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\Blink\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\Blink\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\Blink\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\Blink\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\Blink\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\GreenDevKit\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="builders\GreenDevKit\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository.aspx.cs">
+      <DependentUpon>Repository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository.aspx.designer.cs">
+      <DependentUpon>Repository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories.aspx.cs">
+      <DependentUpon>Repositories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories.aspx.designer.cs">
+      <DependentUpon>Repositories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRepository.aspx.cs">
+      <DependentUpon>AddRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRepository.aspx.designer.cs">
+      <DependentUpon>AddRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRepository.aspx.cs">
+      <DependentUpon>DeleteRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRepository.aspx.designer.cs">
+      <DependentUpon>DeleteRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadOld.aspx.cs">
+      <DependentUpon>UploadOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadOld.aspx.designer.cs">
+      <DependentUpon>UploadOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8084" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\sketchbuilder.Core.csproj">
+      <Project>{B6889395-7437-47F2-A507-76FD008D58FA}</Project>
+      <Name>sketchbuilder.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sketchbuilder.Builders.GreenKit\sketchbuilder.Builders.GreenKit.csproj">
+      <Project>{F695CB91-152F-4EA5-AFBE-DB5F21515429}</Project>
+      <Name>sketchbuilder.Builders.GreenKit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sketchbuilder.Builders Blink\sketchbuilder.Builders.Blink.csproj">
+      <Project>{2EA7C1D9-3ADE-4CCE-9F9C-E16D74097730}</Project>
+      <Name>sketchbuilder.Builders.Blink</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="builders\" />
+    <Folder Include="builders\GreenDevKit\" />
+  </ItemGroup>
+</Project>
