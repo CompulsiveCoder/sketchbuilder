@@ -9,15 +9,21 @@
 	string portName = "";
 	public void Page_Load(object sender, EventArgs e)
 	{
-		Response.Redirect("Repositories.aspx");
 	}
 	</script>
 	<style>
-		body
-		{
-			font-family: Verdana;
-			font-size: 11px;
-		}
+    body
+    {
+      font-family: verdana;
+      font-size: 12px;
+    }
+
+    h1
+    {
+      font-family: arial;
+      font-size: 16px;
+    }
+
 
 		div
 		{
@@ -36,6 +42,10 @@
 </head>
 <body>
 	<form id="form1" runat="server">
+    <h1>sketchbuilder</h1>
+    <div><a href="Repositories.aspx">Sketch Repositories</a></div>
+    <div><a href="Builders.aspx">Sketch Builders</a></div>
+    <div><a href="SerialMonitor.aspx">Serial Monitor</a></div>
 	</form>
 </body>
 </html>

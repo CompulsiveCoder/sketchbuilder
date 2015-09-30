@@ -11,7 +11,7 @@
 namespace WWW {
 	
 	
-	public partial class DeleteRepository {
+	public partial class RecommendedRepositories {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
 	}

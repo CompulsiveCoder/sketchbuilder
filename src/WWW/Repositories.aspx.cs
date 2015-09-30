@@ -10,6 +10,8 @@ namespace WWW
   public partial class Repositories : System.Web.UI.Page
   {
     public string[] Data { get;set; }
+    public string RepositoryPath { get;set; }
+    public string RepositoryName { get; set; }
 
     public void Page_Load(object sender, EventArgs e)
     {
@@ -25,6 +27,9 @@ namespace WWW
       }
 
       Data = list.ToArray ();
+
+      RepositoryPath = Request.QueryString ["repoPath"];
+      RepositoryName = Request.QueryString ["repoName"];
     }
     
   }

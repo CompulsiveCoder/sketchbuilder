@@ -62,6 +62,12 @@
     <Content Include="DeleteRepository.aspx" />
     <Content Include="UploadOld.aspx" />
     <Content Include="Upload.aspx" />
+    <Content Include="PullRepository.aspx" />
+    <Content Include="SerialMonitor.aspx" />
+    <Content Include="StartSerialMonitor.aspx" />
+    <Content Include="SerialMonitorOutput.aspx" />
+    <Content Include="RecommendedRepositories.aspx" />
+    <Content Include="Test.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders.aspx.cs">
@@ -141,6 +147,42 @@
     </Compile>
     <Compile Include="Upload.aspx.designer.cs">
       <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PullRepository.aspx.cs">
+      <DependentUpon>PullRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PullRepository.aspx.designer.cs">
+      <DependentUpon>PullRepository.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SerialMonitor.aspx.cs">
+      <DependentUpon>SerialMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SerialMonitor.aspx.designer.cs">
+      <DependentUpon>SerialMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StartSerialMonitor.aspx.cs">
+      <DependentUpon>StartSerialMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StartSerialMonitor.aspx.designer.cs">
+      <DependentUpon>StartSerialMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SerialMonitorOutput.aspx.cs">
+      <DependentUpon>SerialMonitorOutput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SerialMonitorOutput.aspx.designer.cs">
+      <DependentUpon>SerialMonitorOutput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecommendedRepositories.aspx.cs">
+      <DependentUpon>RecommendedRepositories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecommendedRepositories.aspx.designer.cs">
+      <DependentUpon>RecommendedRepositories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

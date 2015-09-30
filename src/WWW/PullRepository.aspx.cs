@@ -7,21 +7,21 @@ using sketchbuilder.Core;
 namespace WWW
 {
   
-  public partial class DeleteRepository : System.Web.UI.Page
+  public partial class PullRepository : System.Web.UI.Page
   {
+    public string Output { get;set; }
+
     public void Page_Load(object sender, EventArgs e)
     {
       var repoName = Request.QueryString ["repo"];
-
-      var repoPath = Request.QueryString ["path"];
 
       var reposDir = Path.GetFullPath ("repositories");
 
       var repoDirectory = Path.Combine (reposDir, repoName);
 
       if (Directory.Exists (repoDirectory)) {
-        var deleter = new RepositoryDeleter (reposDir);
-        deleter.Delete (repoName, repoPath);
+        var puller = new RepositoryPuller (reposDir);
+        Output += puller.Pull (repoName);
       }
     }
   }

@@ -16,6 +16,8 @@ namespace WWW
 
     public string CurrentRepositorySourcePath { get;set; }
 
+    public string CurrentRepositoryBranch { get;set; }
+
     public string[] SketchFilePaths { get;set; }
 
     public string Port;
@@ -47,6 +49,63 @@ namespace WWW
         Port = port.PortName;
       else
         Port = "[no device detected]";
+
+      var repoDirPath = Path.Combine (Path.GetFullPath ("repositories"), repoName);
+      var branchFilePath = Path.Combine (repoDirPath, "branch.txt");
+
+      CurrentRepositoryBranch = File.ReadAllText (branchFilePath);
+    }
+
+    public string[] GetRepositoryDirectories()
+    {
+      return GetRepositoryDirectories ("/");
+    }
+
+    public string[] GetRepositoryDirectories(string subDir)
+    {
+      var dir = Path.Combine (Path.GetFullPath ("repositories"), CurrentRepository);
+      return Directory.GetDirectories (dir);
+    }
+
+    public string Format(string dir)
+    {
+      var baseDir = Path.Combine (Path.GetFullPath ("repositories"), CurrentRepository);
+      return dir.Replace (baseDir, "").TrimStart('/');
+    }
+
+    public string GetDirectoryOutput()
+    {
+      return GetDirectoryOutput ("/");
+    }
+
+    public string GetDirectoryOutput(string dir)
+    {
+      if (!Path.GetFileName (dir).StartsWith (".")) {
+        var workspaceDir = Path.Combine (Path.GetFullPath ("repositories"), CurrentRepository);
+
+        if (dir == "/")
+          dir = "";
+
+        dir = Path.Combine (workspaceDir, dir);  
+
+        var output = "";
+
+        foreach (var subDir in Directory.GetDirectories(dir)) {
+          output = @"<div class='folder'><a href=''>" + Format (subDir) + @"/</a>";
+
+          output += GetDirectoryOutput (subDir);
+
+          output += "</div>";
+        }
+
+         foreach (var file in Directory.GetFiles(dir)){
+          output += "<div class='file'><a href='javascript:editFile(\"" + Format(file) + "\");'>" + Format (file) + "</a></div>";
+        }
+
+
+        return output;
+      } else
+        return "";
     }
 
   }
