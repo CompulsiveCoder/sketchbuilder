@@ -1,4 +1,4 @@
-sudo apt-get install -y git
+apt-get install -y git
 
 git clone https://github.com/CompulsiveCoder/sketchbuilder.git
 

@@ -9,7 +9,7 @@
 	string portName = "";
 	public void Page_Load(object sender, EventArgs e)
 	{
-		Response.Redirect("Builders.aspx");
+		Response.Redirect("Repositories.aspx");
 	}
 	</script>
 	<style>
