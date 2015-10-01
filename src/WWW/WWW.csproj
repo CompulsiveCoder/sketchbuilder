@@ -68,6 +68,7 @@
     <Content Include="SerialMonitorOutput.aspx" />
     <Content Include="RecommendedRepositories.aspx" />
     <Content Include="Test.aspx" />
+    <Content Include="LoadRepositoryFile.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders.aspx.cs">
@@ -183,6 +184,12 @@
     </Compile>
     <Compile Include="Test.aspx.designer.cs">
       <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoadRepositoryFile.aspx.cs">
+      <DependentUpon>LoadRepositoryFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoadRepositoryFile.aspx.designer.cs">
+      <DependentUpon>LoadRepositoryFile.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

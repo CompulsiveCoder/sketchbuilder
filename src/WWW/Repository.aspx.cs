@@ -99,7 +99,7 @@ namespace WWW
         }
 
          foreach (var file in Directory.GetFiles(dir)){
-          output += "<div class='file'><a href='javascript:editFile(\"" + Format(file) + "\");'>" + Format (file) + "</a></div>";
+          output += "<div class='file'><a href='javascript:editFile(\"" + CurrentRepository + "\",\"" + Format(file) + "\");'>" + Format (file) + "</a></div>";
         }
 
 

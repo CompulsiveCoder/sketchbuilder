@@ -29,11 +29,23 @@
     {
       font-size: 9px;
     }
+
+    #editor
+    {
+      width: 100%;
+      height: 200px;
+      font-size: 10px;
+    }
   </style>
 </head>
 <body>
+  <script src="lib/codemirror.js"></script>
+  <link rel="stylesheet" href="lib/codemirror.css">
  <script type="text/javascript" src="jquery.js"></script>
+ <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
  <script language="javascript">
+  var editor;
+
   function upload()
   {
     var board = $('#board').val();
@@ -151,9 +163,17 @@
     }, refreshRate);
   }
 
-  function editFile(file)
+  function editFile(repoName, file)
   {
-    alert(file);
+    var url = "LoadRepositoryFile.aspx?repoName=" + repoName + "&path=" + encodeURIComponent(file);
+    alert(url);
+     $.ajax({
+       url:url,
+       type:'GET',
+       success: function(data){
+          editor.setValue($(data).find('#FileContent').text());
+       }
+    });
   }
  </script>
  <form id="form1" runat="server">
@@ -165,7 +185,7 @@
     <select name="sketchFile" id="sketchFile">
       <option></option>
     <% foreach (var sketchFilePath in SketchFilePaths){ %>
-      <option value='<% =HttpUtility.HtmlEncode(sketchFilePath) %>' <% =(SketchFilePaths.Length == 1 ? "selected" : "") %>> <%= sketchFilePath.TrimStart('/') %></option>
+      <option value='<%= HttpUtility.HtmlEncode(sketchFilePath) %>' <%= (SketchFilePaths.Length == 1 ? "selected" : "") %>> <%= sketchFilePath.TrimStart('/') %></option>
     <% } %>
     </select>
   </div>
@@ -176,11 +196,18 @@
       <option value="nano328">nano</option>
     </select>
   </div>
+  <div><input type="button" id="uploadButton" value="Upload" onclick='upload();'/> <span id="UploadStatus"></span></div>
   <h2>Contents</h2>
   <div>
     <%= GetDirectoryOutput() %>
   </div>
-  <div><input type="button" id="uploadButton" value="Upload" onclick='upload();'/> <span id="UploadStatus"></span></div>
+  <h2>Editor</h2>
+  <div id="editorCont"><textarea id="FileEditor"></textarea></div>
+  <script>
+    editor = CodeMirror.fromTextArea(FileEditor, {
+      lineNumbers: true
+    });
+  </script>
   <h2>Output</h2>
   <div id="OutputCont" class="log" style="width: 600px;height:150px;overflow:auto;border:solid 1px lightgray;"></div>
   <h2>Serial Monitor</h2>
