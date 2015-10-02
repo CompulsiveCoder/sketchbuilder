@@ -26,10 +26,10 @@ To install on a ubuntu/debian machine...
   cd ~/Desktop
 
 3) Install wget (if not already installed)
-  sudo apt-get install wget
+  sudo apt-get install -y wget
 
 4) Use wget to download the install and run script:
-  wget --no-cache https://raw.githubusercontent.com/CompulsiveCoder/sketchbuilder/master/run-from-git.sh
+  wget --no-cache --no-check-certificate https://raw.githubusercontent.com/CompulsiveCoder/sketchbuilder/master/run-from-git.sh
 
 5) Launch the install and run script
   sudo sh run-from-git.sh
