@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
- <title>Repository</title>
+ <title><% =CurrentRepository %></title>
   <style>
     
     body
@@ -166,11 +166,13 @@
   function editFile(repoName, file)
   {
     var url = "LoadRepositoryFile.aspx?repoName=" + repoName + "&path=" + encodeURIComponent(file);
-    alert(url);
+  //  alert(url);
      $.ajax({
        url:url,
        type:'GET',
        success: function(data){
+          $('#editorPreCont').hide();
+          $('#editorCont').show();
           editor.setValue($(data).find('#FileContent').text());
        }
     });
@@ -202,7 +204,8 @@
     <%= GetDirectoryOutput() %>
   </div>
   <h2>Editor</h2>
-  <div id="editorCont"><textarea id="FileEditor"></textarea></div>
+  <div id="editorPreCont">Select a file above to edit it. (Note: this feature is incomplete. You can view the contents of the file but not yet edit it.)</div>
+  <div id="editorCont" style="display:none;"><textarea id="FileEditor" height="200px"></textarea></div>
   <script>
     editor = CodeMirror.fromTextArea(FileEditor, {
       lineNumbers: true

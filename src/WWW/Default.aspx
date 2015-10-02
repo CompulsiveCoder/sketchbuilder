@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-	<title>Web Cam</title>
+	<title>sketchbuilder</title>
 	<script runat="server">
 	string portName = "";
 	public void Page_Load(object sender, EventArgs e)
