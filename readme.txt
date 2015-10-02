@@ -41,7 +41,7 @@ Root directory: /home/[user]/projects/sketchbuilder/src/WWW
 Listening on port: 9000 (non-secure)
 Hit Return to stop the server."
 
-7) Leave this window open at that message until you want to stop the eserver.
+7) Leave this window open at that message until you want to stop the server.
 To stop the server without closing the window hit Enter.
 
 8) Take note of the port number at "Listening on port: [portNumber]". It may be one of the following (or it may be something else)
