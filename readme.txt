@@ -48,13 +48,11 @@ To stop the server without closing the window hit Enter.
   - 8080
   - 9000
 
-9) Once the server has started and display the message above, open the browser to
+9) Once the server has started (and displays the message above) open the browser to
   http://localhost:8080
-or
-  http://localhost:9000
 (Change the port to the one displayed on the web server message mentioned above.)
 
-The web application should load and you can start using it.
+The sketchbuilder application should load and you can start using it.
 
 10) Plug in your arduino and you should be able to upload sketches.
 Note: If the arduino can't be detected then refresh the page and it'll try again.
