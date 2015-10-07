@@ -5,10 +5,12 @@ apt-get install -y mono-runtime mono-xsp4
 mkdir lib
 cd lib
 
-sudo mozroots --import --sync
+sh getlibs.sh
 
-wget http://nuget.org/nuget.exe
+#sudo mozroots --import --sync
 
-mono nuget.exe install nunit
+#wget http://nuget.org/nuget.exe
+
+#mono nuget.exe install nunit
 
 cd ..
