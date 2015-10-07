@@ -56,7 +56,18 @@
             var backgroundColor = 'black';
             var text = '...';
 
-            if (log.indexOf('avrdude done.') > -1)
+            var isError = false;
+
+            if (log.indexOf('Cloning into') > -1)
+            {
+              isError = false;
+            }
+            else
+            {
+              isError = true;
+            }
+
+            if (!isError)
             {
               backgroundColor = 'green';
               text = 'Add Complete';
@@ -73,7 +84,8 @@
 
         $('#OutputCont').show();
 
-        location.href='Repository.aspx?repo=' + repoName;
+        //if (!isError)
+        //  location.href='Repository.aspx?repo=' + repoName;
       }
 
       function pullRepo(name)
