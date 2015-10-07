@@ -68,6 +68,8 @@
     <Content Include="RecommendedRepositories.aspx" />
     <Content Include="Test.aspx" />
     <Content Include="LoadRepositoryFile.aspx" />
+    <Content Include="jquery.js" />
+    <Content Include="jquery-2.1.3.min.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders.aspx.cs">
