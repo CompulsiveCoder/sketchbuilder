@@ -36,6 +36,8 @@
     <Compile Include="RepositorySaver.cs" />
     <Compile Include="RepositoryDeleter.cs" />
     <Compile Include="RepositoryReader.cs" />
+    <Compile Include="RepositoryPuller.cs" />
+    <Compile Include="SerialMonitorStarter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

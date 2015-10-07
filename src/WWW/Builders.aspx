@@ -8,7 +8,7 @@
     body
     {
       font-family: verdana;
-      font-size: 12px;
+      font-size: 11px;
     }
 
     h1

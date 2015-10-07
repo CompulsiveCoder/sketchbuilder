@@ -15,12 +15,20 @@ namespace sketchbuilder.Core
       RepositoriesDirectory = repositoriesDirectory;
     }
 
-    public void Save(string repoName, string remoteRepositoryPath)
+    public void SaveRepositoryPath(string repoName, string remoteRepositoryPath)
     {
       var repositoryFilePath = Path.Combine (RepositoriesDirectory, repoName);
       repositoryFilePath = Path.Combine (repositoryFilePath, "repository.txt");
 
       File.WriteAllText (repositoryFilePath, remoteRepositoryPath);
+    }
+
+    public void SaveRepositoryBranch(string repoName, string remoteRepositoryBranch)
+    {
+      var repositoryBranchFilePath = Path.Combine (RepositoriesDirectory, repoName);
+      repositoryBranchFilePath = Path.Combine (repositoryBranchFilePath, "branch.txt");
+
+      File.WriteAllText (repositoryBranchFilePath, remoteRepositoryBranch);
     }
 	}
 

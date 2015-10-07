@@ -15,6 +15,7 @@ namespace WWW
     {
       var repoName = Request.QueryString ["name"];
       var repoPath = Request.QueryString ["path"];
+      var repoBranch = Request.QueryString ["branch"];
 
       var reposDir = Path.GetFullPath ("repositories");
 
@@ -24,13 +25,12 @@ namespace WWW
         // TODO: Add to config
         var cloner = new Cloner (reposDir);
 
-        Output += cloner.Clone (repoName, repoPath);
+        Output += cloner.Clone (repoName, repoPath, repoBranch);
 
         var saver = new RepositorySaver (reposDir);
-        saver.Save (repoName, repoPath);
+        saver.SaveRepositoryPath (repoName, repoPath);
+        saver.SaveRepositoryBranch (repoName, repoBranch);
       }
-
-      Response.Redirect ("Repositories.aspx");
     }
   }
 }
