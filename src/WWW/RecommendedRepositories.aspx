@@ -42,7 +42,7 @@
     </ol>
   </div>
   <h1>Repositories</h1>
-  <div>Blink: <a href="Repositories.aspx?repoName=blink&repoPath=https://github.com/joonyeechuah/Arduino_blinky.git">https://github.com/joonyeechuah/Arduino_blinky.git</a></div>
+  <div>Blink: <a href="Repositories.aspx?repoName=Blink&repoPath=https://github.com/CodeReferenceLibrary/Blink.git">https://github.com/CodeReferenceLibrary/Blink.git</a></div>
   <div>Analog Read Serial: <a href="Repositories.aspx?repoName=AnalogReadSerial&repoPath=https://github.com/CodeReferenceLibrary/AnalogReadSerial.git">https://github.com/CodeReferenceLibrary/AnalogReadSerial.git</a></div>
  </form>
 </body>

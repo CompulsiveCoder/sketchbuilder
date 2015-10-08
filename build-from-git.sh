@@ -1,0 +1,9 @@
+apt-get install -y git
+
+git clone https://github.com/CompulsiveCoder/sketchbuilder.git
+
+cd sketchbuilder
+
+sh init.sh
+
+sh build.sh
