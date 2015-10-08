@@ -26,17 +26,10 @@ To install on a ubuntu/debian machine...
   cd ~/Desktop
 
 3) Install wget (if not already installed)
-<<<<<<< HEAD
   sudo apt-get install -y wget
 
 4) Use wget to download the install and run script:
   wget --no-cache --no-check-certificate https://raw.githubusercontent.com/CompulsiveCoder/sketchbuilder/master/run-from-git.sh
-=======
-  sudo apt-get install wget
-
-4) Use wget to download the install and run script:
-  wget https://raw.githubusercontent.com/CompulsiveCoder/sketchbuilder/master/run-from-git.sh
->>>>>>> files
 
 5) Launch the install and run script
   sudo sh run-from-git.sh
@@ -48,37 +41,6 @@ Root directory: /home/[user]/projects/sketchbuilder/src/WWW
 Listening on port: 9000 (non-secure)
 Hit Return to stop the server."
 
-<<<<<<< HEAD
-7) Leave this window open at that message until you want to stop the server.
-To stop the server without closing the window hit Enter.
-
-8) Take note of the port number at "Listening on port: [portNumber]". It may be one of the following (or it may be something else)
-  - 8080
-  - 9000
-
-9) Once the server has started (and displays the message above) open the browser to
-  http://localhost:8080
-(Change the port to the one displayed on the web server message mentioned above.)
-
-The sketchbuilder application should load and you can start using it.
-
-10) Plug in your arduino and you should be able to upload sketches.
-Note: If the arduino can't be detected then refresh the page and it'll try again.
-
-
-Launch/Run
-
-To launch the sketchbuilder app...
-
-Note: The instructions above (and run-from-git.sh script) installed and launched the sketchbuilder app, but if you stop the server and want to re-launch it at a later point follow these instructions. It will launch the application more quickly than the run-from-git.sh script because it skips the installation step.
-
-1) Open a terminal window
-  CTRL+ALT+T
-
-2) Navigate to the sketchbuilder directory
-  ~/Desktop/sketchbuilder
-
-=======
 7) Leave this window open at that message until you want to stop the eserver.
 To stop the server without closing the window hit Enter.
 
@@ -110,7 +72,6 @@ Note: The instructions above (and run-from-git.sh script) installed and launched
 2) Navigate to the sketchbuilder directory
   ~/Desktop/sketchbuilder
 
->>>>>>> files
 3) Run the launch.sh script
   sudo sh launch.sh
 
